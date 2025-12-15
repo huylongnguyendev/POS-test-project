@@ -1,0 +1,32 @@
+# Build Output
+bin/
+obj/
+artifacts/
+
+# User Specific
+*.user
+*.suo
+*.vs/
+
+# Dependencies
+packages/
+*.nupkg
+
+# Logs & Temp Files
+*.log
+*.tmp
+*.bak
+
+# Database Files
+*.mdf
+*.ldf
+*.db
+
+# Test Results
+TestResults/
+*.coverage
+*.trx
+
+# System Files
+.DS_Store
+Thumbs.db
