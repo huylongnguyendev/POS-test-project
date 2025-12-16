@@ -1,4 +1,4 @@
-using PosApi.Modules;
+using PosApi.Models;
 
 namespace PosApi.Services;
 
@@ -28,6 +28,13 @@ public class ProductService
     new Product("product20", "Khăn choàng cổ len", "Phụ kiện", 220000, 20),
   };
 
-  public IEnumerable<Product> GetAll() => _products;
-  
+  public IEnumerable<Product> GetAll(string? searchFilter)
+  {
+    if (!string.IsNullOrEmpty(searchFilter))
+      return _products.Where(p =>
+        p.Name.Contains(searchFilter, StringComparison.OrdinalIgnoreCase)
+      );
+    else
+      return _products;
+  }
 }

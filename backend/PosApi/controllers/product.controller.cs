@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using PosApi.Modules;
+using PosApi.Models;
 using PosApi.Services;
 
 namespace PosApi.Controllers;
@@ -8,13 +8,20 @@ namespace PosApi.Controllers;
 [Route("api/v1/products")]
 public class ProductsController : ControllerBase
 {
-  private readonly ProductService _service = new ProductService();
+  private readonly ProductService _productService = new ProductService();
 
-  public ProductsController() { }
+  public ProductsController(ProductService productService)
+  {
+    _productService = productService;
+  }
 
   [HttpGet]
-  public IActionResult GetAll()
+  public IActionResult GetAll(
+    [FromQuery] string? searchFilter
+  )
   {
-    return Ok(_service.GetAll());
+    IEnumerable<Product> products;
+    products = _productService.GetAll(searchFilter);
+    return Ok(products);
   }
 }

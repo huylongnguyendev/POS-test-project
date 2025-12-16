@@ -1,4 +1,4 @@
-namespace PosApi.Modules;
+namespace PosApi.Models;
 
 public class Product
 {
