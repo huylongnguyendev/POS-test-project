@@ -2,7 +2,6 @@ import MainScreen from "./layouts/MainScreen"
 import SubScreen from "./layouts/SubScreen"
 import { Provider } from "react-redux"
 import { store } from "./store/store"
-import { Toaster } from "sonner"
 
 export default function App() {
   return (
@@ -11,7 +10,7 @@ export default function App() {
         <MainScreen />
         <SubScreen />
       </div>
-      <Toaster richColors />
+      
     </Provider>
   )
 }

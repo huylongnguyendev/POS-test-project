@@ -31,7 +31,7 @@ export default function ProductItem({ item }: { item: ProductType }) {
       <Card>
         <CardHeader className="gap-1">
           <CardTitle>{name}</CardTitle>
-          <CardDescription className="font-semibold text-primary ms-auto text-lg">{price.toLocaleString("vn")}đ</CardDescription>
+          <CardDescription className="font-semibold text-primary text-lg">{price.toLocaleString("vn")}đ</CardDescription>
         </CardHeader>
         <CardFooter className="mt-auto">
           <Button

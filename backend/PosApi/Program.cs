@@ -33,13 +33,6 @@ builder.Services.AddSingleton<IOrderService, OrderService>();
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "POS API v1");
-    c.RoutePrefix = "swagger";
-});
-
 app.UseHttpsRedirection();
 app.UseCors();
 app.MapControllers();

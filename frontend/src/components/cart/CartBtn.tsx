@@ -5,6 +5,8 @@ import { useEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../../lib/hooks/redux.hook"
 import { createCart, fetchCart } from "../../lib/services/cart.service"
 import type { Cart } from "../../lib/types/cart.type"
+import CartBox from "./Cart"
+
 
 export default function CartBtn() {
   const cart = useAppSelector((state) => state.cart.cart)
@@ -38,7 +40,7 @@ export default function CartBtn() {
       <Button
         variant="outline"
         size="icon"
-        className="relative"
+        className="relative group"
       >
         <ShoppingBag />
         <Badge
@@ -47,6 +49,7 @@ export default function CartBtn() {
         >
           {cart?.items.length}
         </Badge>
+        <CartBox />
       </Button>
     </>
   )
