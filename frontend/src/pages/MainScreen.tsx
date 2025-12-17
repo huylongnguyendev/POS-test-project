@@ -1,6 +1,6 @@
 import React, { Suspense } from "react"
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "../layouts/Header"
+import Footer from "../layouts/Footer"
 import { Toaster } from "sonner"
 
 export default function MainScreen() {
@@ -9,7 +9,7 @@ export default function MainScreen() {
 
   return (
     <>
-      <div className="w-2/3 border rounded-md h-fit">
+      <div className="border rounded-md px-4 h-dvh">
         <Header />
         <div className="h-calc space-y-2 overflow-auto p-4">
           <h2 className="font-semibold">Danh sách sản phẩm</h2>

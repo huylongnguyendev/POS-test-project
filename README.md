@@ -23,11 +23,11 @@ Hệ thống bán hàng (POS) đơn giản gồm:
 
 ## 🚀 Cách chạy dự án
 
-1. Clone source code
+1.Clone source code
   git clone <https://github.com/huylongnguyendev/POS-Project.git>
   cd POS-Project
 
-2. Chạy file
+2.Chạy file
 
 - Chạy bằng Docker:
   - Các lệnh:
@@ -38,15 +38,18 @@ Hệ thống bán hàng (POS) đơn giản gồm:
   - Frontend: cd frontend && npm install && npm run dev
   - Backend: cd backend/PosApi && dotnet restore && dotnet run
 
-3. Truy cập
+3.Truy cập
 
-- Frontend: <http://localhost:5173>
+- Frontend
+  - Màn hình chính: <http://localhost:5173>
+  - Màn hình phụ: <http://localhost:5173/sub>
+
 - Backend: <http://localhost:5192/api/v1/{endpoint}>
   - Lấy danh sách sản phẩm: <http://localhost:5192/api/v1/products>
   - Tạo giỏ hàng: <http://localhost:5192/api/v1/cart/create>
   - Truy cập giỏ hàng: <http://localhost:5192/api/v1/cart/{id}>
   - Danh sách đơn hàng: <http://localhost:5192/api/v1/orders>
 
-4. Tác giả
+4.Tác giả
 
   Nguyễn Huy Long - huylongnguyendev.

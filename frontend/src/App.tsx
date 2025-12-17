@@ -1,16 +1,15 @@
-import MainScreen from "./layouts/MainScreen"
-import SubScreen from "./layouts/SubScreen"
-import { Provider } from "react-redux"
-import { store } from "./store/store"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import MainScreen from "./pages/MainScreen"
+import SubScreen from "./pages/SubScreen"
 
 export default function App() {
   return (
-    <Provider store={store}>
-      <div className="flex items-center gap-4 px-4 ">
-        <MainScreen />
-        <SubScreen />
-      </div>
-      
-    </Provider>
+      <BrowserRouter>
+
+        <Routes>
+          <Route path="/" element={<MainScreen />} />
+          <Route path="/sub" element={<SubScreen />} />
+        </Routes>
+      </BrowserRouter>
   )
 }
