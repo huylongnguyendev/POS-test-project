@@ -7,6 +7,7 @@ Hệ thống bán hàng (POS) đơn giản gồm:
 - **Màn hình bán hàng (POS Screen)**:
   - Danh sách sản phẩm bao gồm tên, giá sản phẩm, nút mua hàng.
   - Giỏ hàng gồm số lượng sản phẩm (khác sản phẩm), tổng giá, và nút thanh toán.
+  - Tìm kiếm sản phẩm theo tên.
 
 - **Màn hình realtime (Realtime Screen)**: hiển thị danh sách đơn hàng realtime bao gồm mã đơn hàng, thời gian mua (thời điểm thanh toán), tổng tiền đơn hàng.
 
@@ -22,3 +23,29 @@ Hệ thống bán hàng (POS) đơn giản gồm:
 
 ## 🚀 Cách chạy dự án
 
+1. Clone source code
+  git clone <https://github.com/huylongnguyendev/POS-Project.git>
+  cd POS-Project
+
+2. Chạy file
+
+- Chạy bằng Docker:
+  - Các lệnh:
+    - Build dự án: docker-compose build
+    - Run dự án: docker-compose up -d
+    - Stop dự án: docker-compose down
+- Chạy thủ công
+  - Frontend: cd frontend && npm install && npm run dev
+  - Backend: cd backend/PosApi && dotnet restore && dotnet run
+
+3. Truy cập
+
+- Frontend: <http://localhost:5173>
+- Backend: <http://localhost:5192/api/v1/{endpoint}>
+  - Sản phẩm: products
+  - Giỏ hàng: carts/{id} (id được lưu trong local storage)
+  - Orders: orders
+
+4. Tác giả
+
+  Nguyễn Huy Long - huylongnguyendev.
