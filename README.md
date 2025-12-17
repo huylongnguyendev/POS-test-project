@@ -42,9 +42,10 @@ Hệ thống bán hàng (POS) đơn giản gồm:
 
 - Frontend: <http://localhost:5173>
 - Backend: <http://localhost:5192/api/v1/{endpoint}>
-  - Sản phẩm: products
-  - Giỏ hàng: carts/{id} (id được lưu trong local storage)
-  - Orders: orders
+  - Lấy danh sách sản phẩm: <http://localhost:5192/api/v1/products>
+  - Tạo giỏ hàng: <http://localhost:5192/api/v1/cart/create>
+  - Truy cập giỏ hàng: <http://localhost:5192/api/v1/cart/{id}>
+  - Danh sách đơn hàng: <http://localhost:5192/api/v1/orders>
 
 4. Tác giả
 
