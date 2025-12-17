@@ -20,7 +20,7 @@ export default function OrderItem({ item }: { item: OrderItemType }) {
         <h3 className="font-semibold">Mã đơn hàng: {item.id}</h3>
         <div className="text-sm text-accent-foreground flex justify-between items-center">
           <p>Ngày mua: {formatted}</p>
-          <p>Tổng cộng: {item.totalPrice}</p>
+          <p>Tổng cộng: {item.totalPrice.toLocaleString("vi-VN")}</p>
         </div>
       </li>
     </>

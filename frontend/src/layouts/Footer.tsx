@@ -30,7 +30,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="w-full p-4 fixed bottom-0 z-50 bg-secondary rounded-t-md border">
+      <footer className="w-full p-4 bg-secondary rounded-t-md border">
         <h2 className="font-semibold text-lg">Giỏ hàng</h2>
         <div className="flex justify-between items-center">
           <p className="font-semibold">Tổng tiền: {total.toLocaleString("vn")}đ</p>

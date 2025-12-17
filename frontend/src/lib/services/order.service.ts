@@ -8,10 +8,3 @@ export const createOrder = createAsyncThunk("createOrder/order",
     return res.data
   }
 )
-
-export const getAllOrder = createAsyncThunk("getAllOrder/order",
-  async () => {
-    const res = await api.get("/orders")
-    return res.data
-  }
-)
