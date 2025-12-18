@@ -6,10 +6,10 @@ Hệ thống bán hàng (POS) đơn giản gồm:
 
 - **Màn hình bán hàng (POS Screen)**:
   - Danh sách sản phẩm bao gồm tên, giá sản phẩm, nút mua hàng.
-  - Giỏ hàng gồm số lượng sản phẩm (khác sản phẩm), tổng giá, và nút thanh toán.
+  - Giỏ hàng gồm số lượng sản phẩm (mặt hàng), tổng giá, và nút thanh toán.
   - Tìm kiếm sản phẩm theo tên.
 
-- **Màn hình realtime (Realtime Screen)**: hiển thị danh sách đơn hàng realtime bao gồm mã đơn hàng, thời gian mua (thời điểm thanh toán), tổng tiền đơn hàng.
+- **Màn hình realtime (Realtime Screen)**: hiển thị danh sách đơn hàng realtime, mỗi đơn hàng bao gồm mã đơn hàng, thời gian mua hàng (thời điểm thanh toán), tổng tiền đơn hàng.
 
 ## 🛠️ Công nghệ (chính) sử dụng
 
@@ -19,9 +19,7 @@ Hệ thống bán hàng (POS) đơn giản gồm:
 - **Realtime**: SignalR
 - **Docker**: Container hoá backend và frontend
 
----
-
-## 🚀 Cách chạy dự án
+### 🚀 Cách chạy dự án
 
 1.Clone source code
   git clone <https://github.com/huylongnguyendev/POS-Project.git>
@@ -44,7 +42,7 @@ Hệ thống bán hàng (POS) đơn giản gồm:
   - Màn hình chính: <http://localhost:5173>
   - Màn hình phụ: <http://localhost:5173/sub>
 
-- Backend: <http://localhost:5192/api/v1/{endpoint}>
+- Backend
   - Lấy danh sách sản phẩm: <http://localhost:5192/api/v1/products>
   - Tạo giỏ hàng: <http://localhost:5192/api/v1/cart/create>
   - Truy cập giỏ hàng: <http://localhost:5192/api/v1/cart/{id}>

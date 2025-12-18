@@ -19,7 +19,6 @@ export const createCart = createAsyncThunk("create/cart",
 export const addItem = createAsyncThunk("addProduct/cart",
   async (params: { id: string, item: CartItemType }) => {
     const res = await api.post(`/cart/${params.id}/add`, params.item)
-    console.log(res.data)
     return res.data
   }
 )
